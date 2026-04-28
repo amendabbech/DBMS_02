@@ -593,7 +593,7 @@ Open your fork on GitHub and navigate to the **Actions** tab.
 > **Screenshot 4:** Take a screenshot of the completed GitHub Actions run
 > showing all four steps with green checkmarks, and insert it here.
 >
-> `[insert screenshot]`
+> ![image alt](https://github.com/amendabbech/DBMS_02/blob/b94618e71cb870e1125fda2fb3a81362f7f1ed3e/4.png)
 
 Once the workflow has completed, navigate to **Releases** in the right sidebar.
 
@@ -605,7 +605,7 @@ Once the workflow has completed, navigate to **Releases** in the right sidebar.
 > release title, the release notes, and the `schema.svg` download link, and
 > insert it here.
 >
-> `[insert screenshot]`
+> ![image alt](https://github.com/amendabbech/DBMS_02/blob/b923ed9b5ca9239d1c766b7293adf75c655be87f/5.png)
 
 ### Questions for Task 6
 
@@ -614,14 +614,14 @@ Once the workflow has completed, navigate to **Releases** in the right sidebar.
 Which takes longer, and by approximately what factor? What does this suggest
 about where optimisation effort should be directed?
 
-> *Your answer:*
+> Install PlantUML takes longer than Render SVG by about 5–10×. Optimisation should focus on reducing installation time
 
 **Question 6.2:** Download `schema.svg` from the Release page and compare it
 to the `schema.svg` you rendered locally with `plantuml -tsvg schema.puml`.
 Are they identical? What does this tell you about the reproducibility of the
 build process?
 
-> *Your answer:*
+> Yes, both SVGs are identical or nearly identical, showing the build process is reproducible across environments.
 
 ---
 
