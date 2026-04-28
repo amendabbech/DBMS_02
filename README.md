@@ -216,20 +216,23 @@ git commit -m "feat: complete ER schema for library management"
 ellipses). PlantUML uses Crow's Foot notation. Describe one concrete difference
 in how an N:M relationship is represented in each notation.
 
-> *Your answer:*
+>  Chen: N:M is shown as a diamond (relationship) between two entities (rectangles).
+Crow’s Foot: N:M is shown directly with crow’s foot symbols on both ends of a connecting line, without a separate diamond.
 
 **Question 2.2:** What would happen if you wrote `@startuml Library` instead of
 `@startuml` at the top of `schema.puml`? Try it locally (`plantuml -tsvg schema.puml`)
 and observe the output filename. Why would this break the workflow?
 
-> *Your answer:*
+> The output file becomes named Library.svg instead of schema.svg.
+This breaks workflows because scripts often expect a fixed filename like schema.svg.
 
 **Question 2.3:** The `Author`–`Book` relationship is N:M. Does your PlantUML
 diagram require you to model the intermediate join table explicitly, or does
 PlantUML abstract it away? At which stage of the design process would the join
 table appear?
 
-> *Your answer:*
+> No, the join table is not explicitly shown in PlantUML.
+It appears later in the relational/physical design stage when converting to a database schema.
 
 ---
 
