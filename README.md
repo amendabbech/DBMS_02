@@ -635,7 +635,7 @@ your schema. What would be different if you had stored the diagram as a
 `.drawio` file or a PNG instead of a `.puml` file? What information would you
 lose?
 
-> *Your answer:*
+> If the diagram were stored as a .drawio or .png file instead of a .puml file, Git would not show meaningful textual differences between versions. You would lose the ability to see exactly what changed , since binary or visual files do not store readable diffs.
 
 **Question B – Collaboration:**
 Imagine two people editing `schema.puml` simultaneously on separate branches –
@@ -643,14 +643,16 @@ one adds a `Genre` entity, the other corrects a cardinality. When they merge,
 Git can show a textual diff of the conflict. Would this be possible with a
 binary diagram file? What practical consequence does this have for a team?
 
-> *Your answer:*
+> No, with a binary diagram file Git cannot show a meaningful line-by-line diff or easily merge changes. This makes conflicts hard to resolve because developers would need to manually compare and re-edit the diagram.
+The practical consequence is that collaboration becomes slower, error-prone, and less transparent, making structured teamwork significantly harder.
 
 **Question C – Tag vs. branch for releases:**
 You tagged a specific commit as `v1.0.0` rather than pushing to a branch called
 `release`. What guarantee does an annotated tag offer that a branch cannot?
 Under what circumstance would someone want to use a branch instead?
 
-> *Your answer:*
+> An annotated tag guarantees a fixed, immutable snapshot of a specific commit, meaning it will never change. A branch, in contrast, continues to move as new commits are added.
+A branch would be used when ongoing development or maintenance of a release line is needed
 
 **Question D – The value of CI for documentation:**
 Before this exercise, updating a diagram meant: edit the source, export an
@@ -658,14 +660,14 @@ image, commit the image, hope the export matched the source. Describe in two
 sentences what the CI pipeline eliminates, and what new guarantee it provides
 instead.
 
-> *Your answer:*
+> The CI pipeline removes the manual steps of exporting and committing diagram images, ensuring the diagram is always generated automatically from the source. It guarantees that the published diagram always matches the latest committed .puml file exactly, eliminating human error and inconsistencies.
 
 > **Screenshot 6:** Take a screenshot of your terminal showing
 > `git log --oneline` with all commits from this exercise visible, then open
 > `schema.svg` from the Release in the same browser window alongside it.
 > Capture both in one screenshot and insert it here.
 >
-> `[insert screenshot]`
+> ![image alt](https://github.com/amendabbech/DBMS_02/blob/50864ef5a6a87e85e9157f663297740381081b5e/6.png)
 
 ---
 
