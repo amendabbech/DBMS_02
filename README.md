@@ -65,7 +65,7 @@ git --version
 > **Screenshot 1:** Take a screenshot of your terminal showing all three
 > successful version checks and insert it here.
 >
-> `[insert screenshot]`
+> ![image alt](https://github.com/amendabbech/DBMS_02/blob/5f42927f5d11c295ef6f7cba4a85f0f99ea21280/1.png)
 
 ---
 
