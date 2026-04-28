@@ -299,7 +299,7 @@ Open `schema.svg` in a browser or SVG viewer.
 > **Screenshot 2:** Take a screenshot of `schema.svg` open in your browser,
 > showing all five entities and all four relationships, and insert it here.
 >
-> `[insert screenshot]`
+> ![image alt](https://github.com/amendabbech/DBMS_02/blob/a3fcb13f64f9eb58381476fd2525c5bfd3baa568/2.png)
 
 Once the diagram looks correct, tell Git to ignore the generated artifact.
 The workflow will recreate it on every release:
@@ -327,13 +327,13 @@ git commit -m "chore: ignore generated SVG artifact"
 Name one shell command you could use to check the exit code of the last command
 and verify that the render succeeded, without opening the SVG file.
 
-> *Your answer:*
+> echo $?
 
 **Question 3.2:** Delete `schema.svg` and run `plantuml -tsvg schema.puml` again.
 Then run `git status`. Is `schema.svg` shown as an untracked file? Explain why
 or why not.
 
-> *Your answer:*
+> Yes, schema.svg will appear as untracked if it is deleted and regenerated, because it is a generated file and is ignored by Git via .gitignore, so it is not tracked.
 
 ---
 
