@@ -401,7 +401,7 @@ git tag
 > **Screenshot 3:** Take a screenshot of `git log --oneline -5` showing your
 > commits in order, and insert it here.
 >
-> `[insert screenshot]`
+> ![imahe alt](https://github.com/amendabbech/DBMS_02/blob/8f4a803dde4e0c107081d720d256cfcc7c5662bb/3.png)
 
 > **Caveat:** Tags are not pushed automatically with `git push origin main`.
 > You must push them explicitly. Forgetting this step means the workflow never
@@ -412,12 +412,12 @@ git tag
 **Question 4.1:** Run `git push origin main`. Then open the **Actions** tab in
 your fork on GitHub. Did any workflow run trigger? Explain why or why not.
 
-> *Your answer:*
+> No, no workflow is triggered because GitHub Actions is configured to run only on tag pushes (v*), not on pushes to the main branch.
 
 **Question 4.2:** Run `git tag -v v1.0.0`. What information is shown that
 `git tag` alone does not display? What does the `-v` flag verify?
 
-> *Your answer:*
+> -v verifies the tag and shows information about its validity and the commit it points to, which is not shown by git tag alone.
 
 ---
 
