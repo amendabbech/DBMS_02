@@ -560,14 +560,14 @@ git commit -m "ci: render PlantUML schema and publish GitHub Release on tag"
 if you replaced it with `on: push: branches: ['main']`? Would the release
 workflow still make sense? Why or why not?
 
-> *Your answer:*
+> If the trigger is changed to on: push: branches: ['main'], the workflow would run on every commit pushed to the main branch instead of only on version tags. This would no longer represent a release workflow, because releases should only be created for specific versioned snapshots (tags), not for every change. Therefore, it would lose its purpose as a controlled release pipeline.
 
 **Question 5.2:** The step `apt-get install plantuml` takes roughly 20–30 seconds
 on every run. In a larger team with many releases per day, this adds up. Name
 one GitHub Actions mechanism that could eliminate this installation time on
 repeated runs.
 
-> *Your answer:*
+> One GitHub Actions mechanism to eliminate repeated installation time is caching (e.g. actions/cache) or using a prebuilt Docker container with PlantUML already installed. This avoids reinstalling PlantUML on every workflow run.
 
 ---
 
